@@ -625,7 +625,18 @@
         }
 
     </style>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <link rel="icon" href ="assets/images/favicon.ico" type="image/x-icon" /> <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/images/arc.png" /> <link rel="apple-touch-icon" sizes="152x152" href="assets/images/arc.png" />
 
+    <!-- web fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- //web fonts -->
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="assets/css/style-starter.css">
 </head>
 
 <body>
@@ -633,27 +644,46 @@
     <!-- =========================================
          NAVBAR
     ========================================= -->
+    <section class="w3l-bootstrap-header">
+  <nav class="navbar navbar-expand-lg navbar-light py-lg-3 py-2">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Mr. JAY's Dashboard</a>
+      <!-- if logo is image enable this   
+    <a class="navbar-brand" href="#index.html">
+        <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+    </a> -->
+      <button class="navbar-toggler custom-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation">
 
-    <header class="navbar">
+    <span class="fa fa-bars"></span>
 
-        <div class="container nav-container">
+</button>
 
-            <a href="index.html" class="logo">
-                Mr. JAY's Dashboard
-            </a>
-
-            <nav class="nav-links">
-
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="projects.html">Projects</a>
-                <a href="connect.html">Connect</a>
-
-            </nav>
-
-        </div>
-
-    </header>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://projects.vignesh-jay.xyz">Projects</a>
+          </li>      
+          <li class="nav-item">
+            <a class="nav-link" href="connect.html">Connect</a>
+          </li>
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
+</section>
 
     <!-- =========================================
          HERO
@@ -898,42 +928,51 @@
 
     </button>
 
-    <script>
+<script>
 
-        window.onscroll = function () {
+window.onscroll = function () {
 
-            scrollFunction()
-        };
+    scrollFunction()
+};
 
-        function scrollFunction() {
+function scrollFunction() {
 
-            if (
-                document.body.scrollTop > 300 ||
-                document.documentElement.scrollTop > 300
-            ) {
+    if (
+        document.body.scrollTop > 300 ||
+        document.documentElement.scrollTop > 300
+    ) {
 
-                document.getElementById("modernTopBtn").style.opacity = "1";
+        document.getElementById("modernTopBtn").style.opacity = "1";
 
-                document.getElementById("modernTopBtn").style.visibility = "visible";
+        document.getElementById("modernTopBtn").style.visibility = "visible";
 
-            } else {
+    } else {
 
-                document.getElementById("modernTopBtn").style.opacity = "0";
+        document.getElementById("modernTopBtn").style.opacity = "0";
 
-                document.getElementById("modernTopBtn").style.visibility = "hidden";
-            }
-        }
+        document.getElementById("modernTopBtn").style.visibility = "hidden";
+    }
+}
 
-        function topFunction() {
+function topFunction() {
 
-            window.scrollTo({
+    window.scrollTo({
 
-                top: 0,
-                behavior: "smooth"
-            });
-        }
+        top: 0,
+        behavior: "smooth"
+    });
+}
 
-    </script>
+</script>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<!-- Popper -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
 </body>
 

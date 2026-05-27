@@ -14611,3 +14611,391 @@ img{
     max-width: 100%;
     height: auto;
 }
+
+/* =========================================
+   MOBILE & TABLET RESPONSIVE FIXES
+========================================= */
+
+@media screen and (max-width: 991px){
+
+    /* NAVBAR */
+
+    .navbar-brand,
+    .logo,
+    .navbar .brand-logo{
+
+        font-size: 2rem !important;
+    }
+
+    .navbar-toggler{
+
+        padding: 8px 12px !important;
+        font-size: 18px !important;
+        border-radius: 10px !important;
+    }
+
+    /* HERO SECTION */
+
+    .hero-section,
+    .banner-section,
+    .main-banner{
+
+        padding-top: 120px !important;
+        padding-bottom: 80px !important;
+        min-height: auto !important;
+    }
+
+    .hero-content{
+
+        text-align: center !important;
+        padding: 0 20px !important;
+    }
+
+    /* PROFILE IMAGE */
+
+    .profile-image,
+    .hero-image img{
+
+        width: 180px !important;
+        height: 180px !important;
+
+        margin: 0 auto 30px auto !important;
+        display: block !important;
+    }
+
+    /* MAIN TITLE */
+
+    .hero-title,
+    .main-title{
+
+        font-size: 3rem !important;
+        line-height: 1.1 !important;
+    }
+
+    /* SUBTITLE */
+
+    .hero-subtitle{
+
+        font-size: 1.3rem !important;
+        line-height: 1.7 !important;
+    }
+
+    /* DESCRIPTION */
+
+    .hero-description,
+    .banner-text p{
+
+        font-size: 1rem !important;
+        line-height: 1.9 !important;
+
+        max-width: 100% !important;
+        margin: 0 auto !important;
+    }
+
+    /* BUTTONS */
+
+    .hero-buttons,
+    .banner-buttons{
+
+        flex-direction: column !important;
+        gap: 15px !important;
+
+        align-items: center !important;
+    }
+
+    .hero-buttons a,
+    .banner-buttons a,
+    .modern-btn{
+
+        width: 100% !important;
+        max-width: 320px !important;
+
+        justify-content: center !important;
+    }
+
+    /* STATUS SECTION */
+
+    .hero-status{
+
+        flex-direction: column !important;
+        gap: 10px !important;
+
+        align-items: center !important;
+    }
+
+    /* SECTION SPACING */
+
+    section{
+
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+    }
+
+    /* CONNECT PAGE */
+
+    .connect-card{
+
+        grid-template-columns: 1fr !important;
+        text-align: center !important;
+    }
+
+    .qr-wrapper{
+
+        margin-top: 40px !important;
+    }
+
+    /* SOCIAL GRID */
+
+    .social-grid{
+
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    /* FOOTER */
+
+    footer{
+
+        text-align: center !important;
+    }
+
+    /* CHATBOT */
+
+    #artibot-container,
+    .artibot-chatbot{
+
+        transform: scale(0.85) !important;
+        transform-origin: bottom left !important;
+    }
+}
+
+
+/* EXTRA SMALL DEVICES */
+
+@media screen and (max-width: 480px){
+
+    .hero-title,
+    .main-title{
+
+        font-size: 2.4rem !important;
+    }
+
+    .hero-subtitle{
+
+        font-size: 1.1rem !important;
+    }
+
+    .profile-image,
+    .hero-image img{
+
+        width: 150px !important;
+        height: 150px !important;
+    }
+
+    .navbar-brand{
+
+        font-size: 1.7rem !important;
+    }
+}
+
+/* =========================================
+   MODERN MOBILE MENU BUTTON
+========================================= */
+
+.custom-toggler{
+
+    border: 1px solid rgba(0, 238, 255, 0.2) !important;
+
+    background: rgba(8, 15, 40, 0.75) !important;
+
+    backdrop-filter: blur(12px);
+
+    width: 48px;
+    height: 48px;
+
+    border-radius: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.3s ease;
+
+    box-shadow:
+        0 0 15px rgba(0, 195, 255, 0.12),
+        inset 0 0 10px rgba(255,255,255,0.02);
+}
+
+/* Remove ugly bootstrap outline */
+
+.custom-toggler:focus,
+.custom-toggler:active{
+
+    outline: none !important;
+    box-shadow:
+        0 0 20px rgba(0, 195, 255, 0.35) !important;
+}
+
+/* Hamburger icon */
+
+.custom-toggler .fa-bars{
+
+    color: #00d9ff;
+    font-size: 20px;
+
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+
+.custom-toggler:hover{
+
+    transform: translateY(-2px);
+
+    border-color: rgba(0, 238, 255, 0.5) !important;
+
+    background: rgba(10, 20, 50, 0.95) !important;
+}
+
+.custom-toggler:hover .fa-bars{
+
+    color: #ffffff;
+}
+
+/* =========================================
+   MOBILE NAV FIX
+========================================= */
+
+@media (max-width: 991px){
+
+    .navbar-collapse{
+
+        border: 1px solid rgba(255,255,255,0.05);
+
+        border-radius: 18px;
+
+        margin-top: 18px;
+
+        padding: 12px 0;
+
+        overflow: hidden;
+
+        transition: all 0.35s ease;
+    }
+
+    .navbar-nav{
+
+        padding: 10px 20px;
+    }
+
+    .navbar-nav .nav-item{
+
+        margin: 8px 0;
+    }
+
+    .navbar-nav .nav-link{
+
+        color: #ffffff !important;
+
+        font-size: 16px;
+
+        font-weight: 500;
+
+        transition: 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover{
+
+        color: #00e5ff !important;
+    }
+}
+
+@media (max-width: 991px){
+
+    .navbar-collapse{
+
+        position: relative;
+
+        background: rgba(12, 18, 38, 0.28);
+
+        backdrop-filter: blur(30px) saturate(180%);
+
+        -webkit-backdrop-filter: blur(30px) saturate(180%);
+
+        border: 1px solid rgba(255,255,255,0.12);
+
+        border-radius: 24px;
+
+        margin-top: 18px;
+
+        padding: 14px 0;
+
+        overflow: hidden;
+
+        box-shadow:
+            0 8px 32px rgba(0,0,0,0.25),
+            inset 0 1px 1px rgba(255,255,255,0.08),
+            0 0 20px rgba(0,229,255,0.08);
+
+        transition: all 0.35s ease;
+    }
+
+    /* glossy reflection */
+
+    .navbar-collapse::before{
+
+        content: "";
+
+        position: absolute;
+
+        top: 0;
+        left: -40%;
+
+        width: 180%;
+        height: 100%;
+
+        background:
+            linear-gradient(
+                120deg,
+                rgba(255,255,255,0.16) 0%,
+                rgba(255,255,255,0.04) 35%,
+                transparent 60%
+            );
+
+        transform: rotate(-8deg);
+
+        pointer-events: none;
+    }
+
+    .navbar-nav{
+
+        position: relative;
+        z-index: 2;
+
+        padding: 8px 20px;
+    }
+
+    .navbar-nav .nav-item{
+
+        margin: 10px 0;
+    }
+
+    .navbar-nav .nav-link{
+
+        color: #ffffff !important;
+
+        font-size: 16px;
+
+        font-weight: 500;
+
+        letter-spacing: 0.4px;
+
+        transition: 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover{
+
+        color: #00e5ff !important;
+
+        transform: translateX(5px);
+    }
+}
