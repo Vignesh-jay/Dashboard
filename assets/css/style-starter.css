@@ -14480,3 +14480,134 @@ iframe {
         font-size: 52px;
     }
 }
+
+body{
+    background:
+    radial-gradient(circle at top,
+    rgba(0,174,255,0.12),
+    transparent 40%),
+
+    linear-gradient(
+    135deg,
+    #01040f,
+    #020817,
+    #01040f);
+
+    color:#fff;
+}
+
+.connect-avatar{
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{transform:translateY(0px);}
+    50%{transform:translateY(-10px);}
+    100%{transform:translateY(0px);}
+}
+
+.qr-wrapper{
+    background:white;
+    padding:18px;
+    border-radius:28px;
+
+    box-shadow:
+    0 0 25px rgba(0,229,255,0.15),
+    0 0 60px rgba(0,229,255,0.08);
+}
+
+.connect-btn{
+
+    background:
+    linear-gradient(
+    135deg,
+    #00e5ff,
+    #7b61ff);
+
+    transition:0.3s ease;
+}
+
+.connect-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 10px 30px rgba(0,229,255,0.2);
+}
+
+.social-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+    margin-top:30px;
+}
+
+.social-item{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    width:90px;
+    height:90px;
+
+    background:rgba(255,255,255,0.04);
+
+    border:1px solid rgba(255,255,255,0.06);
+
+    border-radius:24px;
+
+    transition:0.3s ease;
+}
+
+.social-item img{
+
+    width:42px !important;
+    height:42px !important;
+
+    object-fit:contain;
+
+    display:block;
+}
+
+.social-item:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#00e5ff;
+
+    box-shadow:
+    0 10px 30px rgba(0,229,255,0.15);
+}
+
+/* FIX SOCIAL ICON SIZE */
+
+.social-item img{
+
+    width: 42px !important;
+    height: 42px !important;
+
+    max-width: 42px !important;
+    max-height: 42px !important;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+/* FIX QR CODE SIZE */
+
+.qr-image{
+
+    width: 240px !important;
+    height: 240px !important;
+
+    object-fit: contain;
+}
+
+/* PREVENT GLOBAL IMAGE STRETCHING */
+
+img{
+
+    max-width: 100%;
+    height: auto;
+}
