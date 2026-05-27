@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Connect | Mr. JAY's Dashboard</title>
+
+    <!-- FONT AWESOME -->
+
+    <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- GOOGLE FONT -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+
+            scroll-behavior: smooth;
+        }
+
+        body {
+
+            font-family: 'Poppins', sans-serif;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #020617,
+                    #030b1f,
+                    #020617
+                );
+
+            color: white;
+
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+
+            width: 90%;
+            max-width: 1300px;
+
+            margin: auto;
+        }
+
+        /* =========================================
+           NAVBAR
+        ========================================= */
+
+        .navbar {
+
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+
+            z-index: 1000;
+
+            background:
+                rgba(2, 6, 23, 0.82);
+
+            backdrop-filter: blur(16px);
+
+            border-bottom:
+                1px solid rgba(255,255,255,0.05);
+        }
+
+        .nav-container {
+
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 26px 0;
+        }
+
+        .logo {
+
+            font-size: 40px;
+
+            font-weight: 700;
+
+            color: white;
+        }
+
+        .nav-links {
+
+            display: flex;
+
+            gap: 40px;
+        }
+
+        .nav-links a {
+
+            color: #cbd5e1;
+
+            font-size: 15px;
+
+            transition: 0.3s ease;
+        }
+
+        .nav-links a:hover {
+
+            color: #00e5ff;
+        }
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .connect-hero {
+
+            padding-top: 220px;
+            padding-bottom: 100px;
+
+            text-align: center;
+        }
+
+        .connect-tag {
+
+            color: #00e5ff;
+
+            letter-spacing: 5px;
+
+            font-size: 14px;
+
+            margin-bottom: 25px;
+        }
+
+        .connect-hero h1 {
+
+            font-size: 90px;
+
+            font-weight: 700;
+
+            margin-bottom: 25px;
+
+            line-height: 1.1;
+        }
+
+        .connect-hero p {
+
+            max-width: 780px;
+
+            margin: auto;
+
+            color: #94a3b8;
+
+            font-size: 18px;
+
+            line-height: 1.9;
+        }
+
+        /* =========================================
+           DIGITAL CARD
+        ========================================= */
+
+        .digital-card-section {
+
+            padding-bottom: 120px;
+        }
+
+        .digital-card {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 50px;
+
+            padding: 70px;
+
+            border-radius: 36px;
+
+            background:
+                rgba(255,255,255,0.04);
+
+            border:
+                1px solid rgba(255,255,255,0.06);
+
+            backdrop-filter: blur(22px);
+
+            box-shadow:
+                0 0 60px rgba(0,229,255,0.04);
+        }
+
+        .card-left {
+
+            text-align: center;
+        }
+
+        .connect-avatar {
+
+            width: 210px;
+            height: 210px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border:
+                4px solid rgba(255,255,255,0.08);
+
+            margin-bottom: 35px;
+
+            box-shadow:
+                0 0 55px rgba(0,229,255,0.18);
+        }
+
+        .card-left h2 {
+
+            font-size: 48px;
+
+            margin-bottom: 16px;
+        }
+
+        .role {
+
+            color: #94a3b8;
+
+            font-size: 18px;
+
+            line-height: 1.8;
+
+            margin-bottom: 40px;
+        }
+
+        /* BUTTONS */
+
+        .connect-buttons {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 20px;
+
+            flex-wrap: wrap;
+        }
+
+        .connect-buttons a {
+
+            padding: 16px 30px;
+
+            border-radius: 18px;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #00e5ff,
+                    #7b61ff
+                );
+
+            transition: 0.35s ease;
+
+            font-weight: 500;
+        }
+
+        .connect-buttons a:hover {
+
+            transform:
+                translateY(-5px);
+
+            box-shadow:
+                0 10px 35px rgba(0,229,255,0.18);
+        }
+
+        /* =========================================
+           QR SIDE
+        ========================================= */
+
+        .card-right {
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+        }
+
+        .qr-image {
+
+            width: 300px;
+
+            background: white;
+
+            padding: 20px;
+
+            border-radius: 30px;
+
+            margin-bottom: 30px;
+        }
+
+        .card-right p {
+
+            color: #94a3b8;
+
+            margin-bottom: 28px;
+
+            font-size: 17px;
+        }
+
+        .save-contact-btn {
+
+            padding: 16px 32px;
+
+            border-radius: 18px;
+
+            color: white;
+
+            background:
+                rgba(255,255,255,0.05);
+
+            border:
+                1px solid rgba(255,255,255,0.08);
+
+            transition: 0.35s ease;
+        }
+
+        .save-contact-btn:hover {
+
+            transform:
+                translateY(-5px);
+
+            border-color:
+                rgba(0,229,255,0.16);
+
+            box-shadow:
+                0 0 35px rgba(0,229,255,0.08);
+        }
+
+        /* =========================================
+           SOCIALS
+        ========================================= */
+
+        .connect-socials {
+
+            padding-bottom: 120px;
+        }
+
+        .social-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(220px, 1fr));
+
+            gap: 26px;
+        }
+
+        .social-grid a {
+
+            padding: 40px;
+
+            border-radius: 28px;
+
+            background:
+                rgba(255,255,255,0.04);
+
+            border:
+                1px solid rgba(255,255,255,0.05);
+
+            text-align: center;
+
+            transition: 0.35s ease;
+
+            color: white;
+        }
+
+        .social-grid a:hover {
+
+            transform:
+                translateY(-8px);
+
+            border-color:
+                rgba(0,229,255,0.16);
+
+            box-shadow:
+                0 0 40px rgba(0,229,255,0.06);
+        }
+
+        .social-grid i {
+
+            font-size: 42px;
+
+            color: #00e5ff;
+
+            margin-bottom: 18px;
+        }
+
+        .social-grid span {
+
+            display: block;
+
+            font-size: 18px;
+        }
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        .modern-footer {
+
+            padding: 90px 0 50px;
+
+            border-top:
+                1px solid rgba(255,255,255,0.05);
+
+            text-align: center;
+        }
+
+        .footer-brand h2 {
+
+            font-size: 42px;
+
+            margin-bottom: 20px;
+        }
+
+        .footer-brand p {
+
+            color: #94a3b8;
+
+            max-width: 700px;
+
+            margin: auto;
+
+            line-height: 1.9;
+
+            margin-bottom: 45px;
+        }
+
+        .footer-socials {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 18px;
+
+            flex-wrap: wrap;
+
+            margin-bottom: 50px;
+        }
+
+        .footer-socials a {
+
+            width: 56px;
+            height: 56px;
+
+            border-radius: 18px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            background:
+                rgba(255,255,255,0.04);
+
+            border:
+                1px solid rgba(255,255,255,0.05);
+
+            color: white;
+
+            transition: 0.35s ease;
+        }
+
+        .footer-socials a:hover {
+
+            color: #00e5ff;
+
+            transform:
+                translateY(-5px);
+        }
+
+        .footer-bottom {
+
+            border-top:
+                1px solid rgba(255,255,255,0.05);
+
+            padding-top: 35px;
+        }
+
+        .footer-bottom p {
+
+            color: #64748b;
+
+            font-size: 15px;
+        }
+
+        /* =========================================
+           TOP BUTTON
+        ========================================= */
+
+        #modernTopBtn {
+
+            position: fixed;
+
+            bottom: 28px;
+            right: 28px;
+
+            width: 58px;
+            height: 58px;
+
+            border: none;
+
+            border-radius: 18px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #00e5ff,
+                    #7b61ff
+                );
+
+            color: white;
+
+            font-size: 18px;
+
+            cursor: pointer;
+
+            z-index: 999;
+
+            opacity: 0;
+            visibility: hidden;
+
+            transition: 0.35s ease;
+        }
+
+        #modernTopBtn:hover {
+
+            transform:
+                translateY(-5px);
+        }
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 900px) {
+
+            .digital-card {
+
+                grid-template-columns: 1fr;
+
+                padding: 40px;
+            }
+
+            .connect-hero h1 {
+
+                font-size: 54px;
+            }
+
+            .logo {
+
+                font-size: 28px;
+            }
+
+            .nav-links {
+
+                gap: 18px;
+            }
+
+            .nav-links a {
+
+                font-size: 13px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- =========================================
+         NAVBAR
+    ========================================= -->
+
+    <header class="navbar">
+
+        <div class="container nav-container">
+
+            <a href="#" class="logo">
+                Mr. JAY's Dashboard
+            </a>
+
+            <nav class="nav-links">
+
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="connect.html">Connect</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <!-- =========================================
+         HERO
+    ========================================= -->
+
+    <section class="connect-hero">
+
+        <div class="container">
+
+            <p class="connect-tag">
+                DIGITAL CONNECTION HUB
+            </p>
+
+            <h1>
+                Let's Connect
+            </h1>
+
+            <p>
+                Scan the QR code, save my contact,
+                explore my digital identity,
+                and connect instantly across platforms.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- =========================================
+         DIGITAL CARD
+    ========================================= -->
+
+    <section class="digital-card-section">
+
+        <div class="container">
+
+            <div class="digital-card">
+
+                <!-- LEFT -->
+
+                <div class="card-left">
+
+                    <img src="assets/images/profile.jpg"
+                        class="connect-avatar">
+
+                    <h2>
+                        Vignesh Jayaraman
+                    </h2>
+
+                    <p class="role">
+
+                        IT Administrator • Cybersecurity Analyst • Developer
+
+                    </p>
+
+                    <div class="connect-buttons">
+
+                        <a href="tel:+919524616716">
+
+                            <i class="fa fa-phone"></i>
+                            Call
+
+                        </a>
+
+                        <a href="mailto:vigneshviki428@gmail.com">
+
+                            <i class="fa fa-envelope"></i>
+                            Email
+
+                        </a>
+
+                        <a href="https://wa.me/919524616716"
+                            target="_blank">
+
+                            <i class="fa fa-whatsapp"></i>
+                            WhatsApp
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- RIGHT -->
+
+                <div class="card-right">
+
+                    <img src="assets/images/contact-qr.png"
+                        class="qr-image">
+
+                    <p>
+
+                        Scan to instantly save contact
+
+                    </p>
+
+                    <a href="assets/contact.vcf"
+                        class="save-contact-btn">
+
+                        Download Contact Card
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================================
+         SOCIALS
+    ========================================= -->
+
+    <section class="connect-socials">
+
+        <div class="container">
+
+            <div class="social-grid">
+
+                <a href="https://github.com/Vignesh-jay"
+                    target="_blank">
+
+                    <i class="fa fa-github"></i>
+
+                    <span>GitHub</span>
+
+                </a>
+
+                <a href="https://www.linkedin.com/in/vignesh-jayaraman-18a831184/"
+                    target="_blank">
+
+                    <i class="fa fa-linkedin"></i>
+
+                    <span>LinkedIn</span>
+
+                </a>
+
+                <a href="https://www.instagram.com/vignessjay/"
+                    target="_blank">
+
+                    <i class="fa fa-instagram"></i>
+
+                    <span>Instagram</span>
+
+                </a>
+
+                <a href="https://twitter.com/vignessjay"
+                    target="_blank">
+
+                    <i class="fa fa-twitter"></i>
+
+                    <span>Twitter</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================================
+         FOOTER
+    ========================================= -->
+
+    <footer class="modern-footer">
+
+        <div class="container">
+
+            <div class="footer-brand">
+
+                <h2>
+                    Mr. JAY's Dashboard
+                </h2>
+
+                <p>
+
+                    Cybersecurity, infrastructure,
+                    development, automation,
+                    and futuristic digital experiences.
+
+                </p>
+
+            </div>
+
+            <div class="footer-socials">
+
+                <a href="#">
+                    <i class="fa fa-facebook"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa fa-twitter"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa fa-github"></i>
+                </a>
+
+            </div>
+
+            <div class="footer-bottom">
+
+                <p>
+
+                    © 2026 Mr. JAY's Dashboard.
+                    Crafted with passion by Vignesh Jayaraman.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- =========================================
+         TOP BUTTON
+    ========================================= -->
+
+    <button onclick="topFunction()"
+        id="modernTopBtn">
+
+        <i class="fa fa-arrow-up"></i>
+
+    </button>
+
+    <script>
+
+        window.onscroll = function () {
+
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+
+            if (
+                document.body.scrollTop > 300 ||
+                document.documentElement.scrollTop > 300
+            ) {
+
+                document.getElementById("modernTopBtn").style.opacity = "1";
+
+                document.getElementById("modernTopBtn").style.visibility = "visible";
+
+            } else {
+
+                document.getElementById("modernTopBtn").style.opacity = "0";
+
+                document.getElementById("modernTopBtn").style.visibility = "hidden";
+            }
+        }
+
+        function topFunction() {
+
+            window.scrollTo({
+
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+
+    </script>
+
+</body>
+
+</html>
